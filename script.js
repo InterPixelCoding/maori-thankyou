@@ -45,7 +45,9 @@ fetch_json('https://sheets.googleapis.com/v4/spreadsheets/1zjRNYIoJHSVrsQmtPnAIG
     response.values.forEach(arr => {
         if(arr.includes(code)) {
             document.querySelector("h2").textContent = `Dear ${arr[0]},`;
-            document.querySelector("p").textContent = `${arr[1]}`;
+            document.querySelector("p").innerHTML = `${arr[1]} <div class="line-break"></div> 
+            "Ka nui te mihi!" in Maori translates as "Thank you very much!". For my GCSE DT Project, I made a Maori child's stool. I enjoyed learning about Maori culture, ta toi whakairo (carving), and kowhaiwhai (drawing). I've spent the last few months drawing lots of Maori motifs and patterns in order to design the carvings for the stool. 
+            `;
         }
     })
 })

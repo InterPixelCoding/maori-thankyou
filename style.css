@@ -95,6 +95,11 @@ p {
     font-family: "Roboto Condensed", sans-serif;
 }
 
+.line-break {
+    width: 100%;
+    height: 1em;
+}
+
 span {font-weight: bold;}
 
 h1 {
