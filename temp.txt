@@ -1,0 +1,25 @@
+<svg width="600" height="214" viewBox="0 0 600 214" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Blur filter -->
+    <filter id="blur_filter" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" />
+    </filter>
+
+    <!-- Shape mask using your path -->
+    <mask id="shape_mask">
+      <path d="M600 0H0V191.5C4 169.833 23.8 113.627 69 64.0271C125.5 2.02709 172 -5.47291 189 [...] 286.5 147.527Z"
+            fill="white"/>
+    </mask>
+  </defs>
+
+  <!-- Background (optional) -->
+  <rect width="600" height="214" fill="white" />
+
+  <!-- The growing blurred circle, masked by the path -->
+  <g mask="url(#shape_mask)">
+    <circle id="reveal_circle" cx="300" cy="107" r="10"
+            fill="black"
+            filter="url(#blur_filter)"
+            transform="scale(1)" />
+  </g>
+</svg>
